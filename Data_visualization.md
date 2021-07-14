@@ -15,7 +15,7 @@ ggplot(data=mpg) + geom_point(aes(x=displ, y=hwy), color='blue')
 ```
 ggplot(mpg) + geom_point(aes(x=displ,y=hwy, fill=drv), size=3, shape=21, color="white", stroke=3)
 ```
-This code generate such a scatter plot with thick white contour:
+This code generate such a scatter plot with thick white contour:  
 ![scatterplot](Figures/Data_Visualization/Scatterplot.png)
 
 4. Do not map an unordered variable to an ordered aesthetic. For example, "class" of cars is a discrete variable, while the aesthetic "size" is continuous.  
