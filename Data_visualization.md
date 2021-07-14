@@ -1,6 +1,6 @@
 ## Data Visualization  
 
-1. Aesthetics are visual properties of an object, including color, shape, size, etc. Therefore, to map an aesthetic to a variable, you should put "color=class" into geom_point(aes(…)) bracket.  
+1. Aesthetics are visual properties of an object, including color, shape, size, stroke etc. Therefore, to map an aesthetic to a variable, you should put "color=class" into geom_point(aes(…)) bracket.  
 ```
 ggplot(data=mpg) + geom_point(aes(x=displ, y=hwy, color=class))
 ```
@@ -11,7 +11,12 @@ ggplot(data=mpg) + geom_point(aes(x=displ, y=hwy), color='blue')
 ```
 **Note:** color = "blue" is a plotting characteristic, requiring quotes; color = class maps an aesthetic "color" to variable "class", without requiring quotes.  
 
-3. Scaling: automatically assign a level to each unique variable, followed by adding legend.  
+3. Shapes can be divided into hollow ones and filled ones. They are assigned with different colors. Since shape = 21, the shapes are filled and should be adjusted with "fill=" to change its filled color.
+```
+ggplot(mpg) + geom_point(aes(x=displ,y=hwy, fill=drv), size=3, shape=21, color="white", stroke=3)
+```
+This code generate such a scatter plot with thick white contour:
+![scatterplot](Figures/Data_Visualization/Scatterplot.png)
 
 4. Do not map an unordered variable to an ordered aesthetic. For example, "class" of cars is a discrete variable, while the aesthetic "size" is continuous.  
 
