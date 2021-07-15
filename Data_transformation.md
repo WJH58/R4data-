@@ -17,14 +17,14 @@ near(1 / 49 * 49, 1) # Note this comma.
 * filter(dataframe, conditions of colname) # filter rows by conditions
 * arrange(dataframe, colname) or arrange(dataframe, desc(colname)) # re-order rows according to one or several columns.
 * select(dataframe, conditions) # select columns
-  * conditions:
-    starts_with("")
-    ends_with("")
-    contains("")
-    matches("regular expression") # See regular expression
-    num_range("x", 1:3) # Matches x1, x2, x3.
-    everything(**empty!**) # the rest of columns
-    any_of(c("", "",...))
+  * conditions:  
+    starts_with("")  
+    ends_with("")  
+    contains("")  
+    matches("regular expression") # See regular expression  
+    num_range("x", 1:3) # Matches x1, x2, x3.  
+    everything(**empty!**) # the rest of columns  
+    any_of(c("", "",...))  
 * rename(dataframe, old colname = new colname)
 * mutate(dataframe, new colname = old colnames +-*/...) # add new columns
 * transmute(dataframe, new colname = old colnames +-*/...) # keep only new columns
