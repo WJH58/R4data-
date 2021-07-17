@@ -58,7 +58,7 @@ parse_date("January 1, 2010", "%B %d, %Y")
 **Day**  
 %d (2 digits).  
 %e (optional leading space).  
-**Time**
+**Time**  
 %H 0-23 hour.  
 %I 0-12, must be used with %p.  
 %p AM/PM indicator.  
@@ -67,6 +67,6 @@ parse_date("January 1, 2010", "%B %d, %Y")
 %OS real seconds.  
 %Z Time zone (as name, e.g. America/Chicago). Beware of abbreviations: if you’re American, note that “EST” is a Canadian time zone that does not have daylight savings time. It is not Eastern Standard Time! We’ll come back to this time zones.  
 %z (as offset from UTC, e.g. +0800).  
-**non-digits**
+**non-digits**  
 %. skips one non-digit character.
 %* skips any number of non-digits.
